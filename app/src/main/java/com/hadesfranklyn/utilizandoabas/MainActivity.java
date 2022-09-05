@@ -25,13 +25,15 @@ public class MainActivity extends AppCompatActivity {
         smartTabLayout = findViewById(R.id.viewPagerTab);
         viewPager = findViewById(R.id.viewPager);
 
+        getSupportActionBar().setElevation(0);
+
         // Configurar adapter para abas
         FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(
                 getSupportFragmentManager(),
                 FragmentPagerItems.with(this)
                 .add("Home", HomeFragment.class)
-                .add("InscricoesFragment", InscricoesFragment.class)
-                .add("EmAltaFragment", EmAltaFragment.class)
+                .add("Inscrições", InscricoesFragment.class)
+                .add("Em Alta", EmAltaFragment.class)
                 .create());
 
         viewPager.setAdapter(adapter);
